@@ -13,9 +13,21 @@ class Carikerja extends CI_Controller {
 	public function pencarian()
 	{
 		$this->load->model('M_user');
-		$cari = $this->input->get('keyword');
-		$kota = $this->input->get('kota');
-		$kategori = $this->input->get('kategori');
+		if($this->input->get('keyword') != ""){
+			$cari = $this->input->get('keyword');
+		}else{
+			$cari = "";
+		}
+		if($this->input->get('kota') != ""){
+			$kota = $this->input->get('kota');
+		}else{
+			$kota = "";
+		}
+		if($this->input->get('kategori') != ""){
+			$kategori = $this->input->get('kategori');
+		}else{
+			$kategori = "";
+		}
 		$data['lowongan'] = $this->M_user->cari_lowongan($cari, $kota, $kategori);
 		$this->load->view('layout/header');
 		$this->load->view('carikerja', $data);

@@ -8,7 +8,7 @@
             <?php $delay=5; foreach ($lowongan->result_array() as $row) { ?>
             <div class="col-md-4">
                 <div class="single-work wow fadeInUp" data-wow-delay="0.<?php echo $delay; ?>s">
-                    <img src="<?php echo base_url('assets/uploads/files').'/'.$row['logo_perusahaan']; ?>" alt="">
+                    <center><img class="img-responsive" src="<?php echo base_url('assets/uploads/files').'/'.$row['logo_perusahaan']; ?>" /></center>
                     <h3><?php echo $row['nama_lowongan']; ?></h3>
                     <span class="text-muted"><?php echo $row['waktu']; ?> | <?php echo $row['gaji']; ?></span>
                     <p><?php echo character_limiter(strip_tags($row['detail_info']), 200); ?>.</p>

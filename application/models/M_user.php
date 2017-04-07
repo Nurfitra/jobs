@@ -27,9 +27,9 @@ class M_user extends CI_Model {
 	}
 	public function cari_lowongan($key, $kota, $kategori)
 	{
+		$this->db->like('kota', $kota);
+		$this->db->like('kategori', $kategori);
 		$this->db->like('nama_lowongan', $key);
-		$this->db->or_like('kota', $kota);
-		$this->db->or_like('kategori', $kategori);
 		$this->db->join('lokasi','lokasi_penempatan = lokasi.id_lokasi');
 		$this->db->join('perusahaan','perusahaan = perusahaan.id_perusahaan');
 		$this->db->join('kategori_pekerjaan','kategori_pekerjaan = kategori_pekerjaan.id_kategori');

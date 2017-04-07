@@ -14,8 +14,10 @@
                         <?php foreach ($perusahaan->result_array() as $row) { ?>
                         <li class="single-work wow fadeInUp logo" data-wow-delay="0.5s">
                             <a href="<?php echo base_url('perusahaan/lowongan').'/'.$row['id_perusahaan']; ?>">
-                                <img src="<?php echo base_url('assets/uploads/files').'/'.$row['logo_perusahaan']; ?>" alt="<?php echo $row['nama_perusahaan']; ?>">
-                                <div class="overlay"><h3><?php echo $row['nama_perusahaan']; ?></h3></div>
+                                <img class="img-responsive" src="<?php echo base_url('assets/uploads/files').'/'.$row['logo_perusahaan']; ?>" alt="<?php echo $row['nama_perusahaan']; ?>" />
+                                <div class="overlay">
+                                <h3><?php echo $row['nama_perusahaan']; ?></h3>
+                                </div>
                             </a>
                         </li>
                         <?php } ?>

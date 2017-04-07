@@ -60,6 +60,7 @@ class Admin extends CI_Controller {
 			$crud->set_table('perusahaan');
 			$crud->set_subject('Perusahaan');
 			$crud->set_field_upload('logo_perusahaan','assets/uploads/files');
+			$crud->set_field_upload('video_perusahaan','assets/uploads/files');
 			$output = $crud->render();
 			$this->load->view('admin/pagecontent', $output);
 		}else{

@@ -143,7 +143,7 @@
                     <table class="table">
                     <?php foreach ($lowongan->result_array() as $row) { ?>
                         <tr class="<?php if ($row['id_lowongan'] % 2 == 0) { echo 'even'; }else{ echo 'odd'; } ?> wow fadeInUp" data-wow-delay="1s">
-                            <td class="tbl-logo"><img src="<?php echo base_url('assets/uploads/files').'/'.$row['logo_perusahaan']; ?>" alt=""></td>
+                            <td class="tbl-logo"><img class="img-responsive" src="<?php echo base_url('assets/uploads/files').'/'.$row['logo_perusahaan']; ?>" alt=""></td>
                             <td class="tbl-title"><h4><?php echo $row['nama_lowongan']; ?><br><span class="job-type"><?php echo $row['waktu']; ?></span></h4></td>
                             <td><p><?php echo $row['nama_perusahaan']; ?></p></td>
                             <td><p><i class="icon-location"></i><?php echo $row['kota']; ?>, <?php echo $row['provinsi']; ?></p></td>
